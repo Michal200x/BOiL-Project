@@ -34,8 +34,8 @@ import util.TaskGraphTools;
 public class CriticalPathGUI extends JFrame implements ActionListener,
 		KeyListener {
 	private static final long serialVersionUID = 2923975805665801740L;
-	private static final int WIDTH = 635;
-	private static final int HEIGHT = 485;
+	private static final int WIDTH = 800;
+	private static final int HEIGHT = 500; //485
 	GraphPanel graphPanel;
 	JPanel container;
 	JTextField info;
@@ -78,32 +78,32 @@ public class CriticalPathGUI extends JFrame implements ActionListener,
 		// Buttons
 		addNode = new JButton("Add new node");
 		container.add(addNode);
-		addNode.setBounds(5, 410, 100, 20);
+		addNode.setBounds(5, 410, 125, 20);
 		addNode.addActionListener(this);
 
 		deleteNode = new JButton("Delete node");
 		container.add(deleteNode);
-		deleteNode.setBounds(110, 410, 100, 20);
+		deleteNode.setBounds(135, 410, 125, 20);
 		deleteNode.addActionListener(this);
 
 		addEdge = new JButton("Add new edge");
 		container.add(addEdge);
-		addEdge.setBounds(215, 410, 100, 20);
+		addEdge.setBounds(265, 410, 125, 20);
 		addEdge.addActionListener(this);
 
 		deleteEdge = new JButton("Delete edge");
 		container.add(deleteEdge);
-		deleteEdge.setBounds(320, 410, 100, 20);
+		deleteEdge.setBounds(395, 410, 125, 20);
 		deleteEdge.addActionListener(this);
 
 		execute = new JButton("Critical Path");
 		container.add(execute);
-		execute.setBounds(425, 410, 100, 20);
+		execute.setBounds(525, 410, 125, 20);
 		execute.addActionListener(this);
 
 		clear = new JButton("Clear");
 		container.add(clear);
-		clear.setBounds(530, 410, 100, 20);
+		clear.setBounds(655, 410, 125, 20);
 		clear.addActionListener(this);
 
 		Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
@@ -116,7 +116,7 @@ public class CriticalPathGUI extends JFrame implements ActionListener,
 		graphPanel.nodes.add(start);
 		graphPanel.add(start);
 
-		Point positionEnd = new Point(570, 200);
+		Point positionEnd = new Point(720, 200);
 		NodeView end = new NodeView(positionEnd, "End");
 		graphPanel.nodes.add(end);
 		graphPanel.add(end);
